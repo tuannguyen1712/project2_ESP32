@@ -1,0 +1,1628 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15584
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 14 2023 20:49:58[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=25aech (154348) map[0m
+[0;32mI (161) esp_image: segment 1: paddr=00035b14 vaddr=3ffb0000 size=03738h ( 14136) load[0m
+[0;32mI (166) esp_image: segment 2: paddr=00039254 vaddr=40080000 size=06dc4h ( 28100) load[0m
+[0;32mI (178) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9780ch (620556) map[0m
+[0;32mI (403) esp_image: segment 4: paddr=000d7834 vaddr=40086dc4 size=0e91ch ( 59676) load[0m
+[0;32mI (438) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (438) boot: Disabling RNG early entropy source...[0m
+[0;32mI (450) cpu_start: Multicore app[0m
+[0;32mI (450) cpu_start: Pro cpu up.[0m
+[0;32mI (450) cpu_start: Starting app cpu, entry point is 0x4008137c[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (468) cpu_start: Pro cpu start user code[0m
+[0;32mI (468) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (468) cpu_start: Application information:[0m
+[0;32mI (473) cpu_start: Project name:     mqtt_tcp[0m
+[0;32mI (478) cpu_start: App version:      1[0m
+[0;32mI (482) cpu_start: Compile time:     Oct 14 2023 21:09:35[0m
+[0;32mI (489) cpu_start: ELF file SHA256:  7637d70fd89b839a...[0m
+[0;32mI (495) cpu_start: ESP-IDF:          v5.1.1-dirty[0m
+[0;32mI (500) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (505) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (509) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (514) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (522) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (527) heap_init: At 3FFB7DF0 len 00028210 (160 KiB): DRAM[0m
+[0;32mI (534) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (540) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (547) heap_init: At 400956E0 len 0000A920 (42 KiB): IRAM[0m
+[0;32mI (554) spi_flash: detected chip: generic[0m
+[0;32mI (557) spi_flash: flash io: dio[0m
+[0;32mI (562) app_start: Starting scheduler on CPU0[0m
+[0;32mI (566) app_start: Starting scheduler on CPU1[0m
+[0;32mI (566) main_task: Started on CPU0[0m
+[0;32mI (576) main_task: Calling app_main()[0m
+[0;32mI (576) MQTT_EXAMPLE: [APP] Startup..[0m
+[0;32mI (576) MQTT_EXAMPLE: [APP] Free memory: 279392 bytes[0m
+[0;32mI (586) MQTT_EXAMPLE: [APP] IDF version: v5.1.1-dirty[0m
+[0;32mI (606) example_connect: Start example_connect.[0m
+I (626) wifi:wifi driver task: 3ffbf948, prio:23, stack:6656, core=0
+I (626) wifi:wifi firmware version: ce9244d
+I (626) wifi:wifi certification version: v7.0
+I (626) wifi:config NVS flash: enabled
+I (626) wifi:config nano formating: disabled
+I (636) wifi:Init data frame dynamic rx buffer num: 32
+I (636) wifi:Init management frame dynamic rx buffer num: 32
+I (646) wifi:Init management short buffer num: 32
+I (646) wifi:Init dynamic tx buffer num: 32
+I (646) wifi:Init static rx buffer size: 1600
+I (656) wifi:Init static rx buffer num: 10
+I (656) wifi:Init dynamic rx buffer num: 32
+[0;32mI (666) wifi_init: rx ba win: 6[0m
+[0;32mI (666) wifi_init: tcpip mbox: 32[0m
+[0;32mI (666) wifi_init: udp mbox: 6[0m
+[0;32mI (676) wifi_init: tcp mbox: 6[0m
+[0;32mI (676) wifi_init: tcp tx win: 5744[0m
+[0;32mI (686) wifi_init: tcp rx win: 5744[0m
+[0;32mI (686) wifi_init: tcp mss: 1440[0m
+[0;32mI (686) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (696) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (696) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (816) wifi:mode : sta (24:dc:c3:a6:d0:28)
+I (816) wifi:enable tsf
+[0;32mI (826) example_connect: Connecting to Infrastructure NW...[0m
+[0;32mI (826) example_connect: Waiting for IP(s)[0m
+I (3236) wifi:new:<12,0>, old:<1,0>, ap:<255,255>, sta:<12,0>, prof:1
+I (4396) wifi:state: init -> auth (b0)
+I (4406) wifi:state: auth -> assoc (0)
+I (4406) wifi:state: assoc -> run (10)
+W (4426) wifi:[ADDBA]rx delba, code:39, delete tid:0
+W (4426) wifi:[ADDBA]rx delba, code:39, delete tid:0
+W (4426) wifi:[ADDBA]rx delba, code:39, delete tid:5
+I (4436) wifi:<ba-add>idx:0 (ifx:0, 24:0b:2a:2e:69:79), tid:5, ssn:4, winSize:64
+I (4516) wifi:<ba-add>idx:1 (ifx:0, 24:0b:2a:2e:69:79), tid:0, ssn:378, winSize:64
+I (4516) wifi:connected with Infrastructure NW, aid = 3, channel 12, BW20, bssid = 24:0b:2a:2e:69:79
+I (4526) wifi:security: WPA2-PSK, phy: bgn, rssi: -57
+I (4526) wifi:pm start, type: 1
+
+I (4606) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (5536) esp_netif_handlers: example_netif_sta ip: 192.168.1.11, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (5536) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.1.11[0m
+[0;32mI (5606) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:26dc:c3ff:fea6:d028, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (5606) example_common: Connected to example_netif_sta[0m
+[0;32mI (5616) example_common: - IPv4 address: 192.168.1.11,[0m
+[0;32mI (5616) example_common: - IPv6 address: fe80:0000:0000:0000:26dc:c3ff:fea6:d028, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (5636) MQTT_EXAMPLE: Other event id:7[0m
+[0;32mI (5636) main_task: Returned from app_main()[0m
+[0;32mI (6556) MQTT_EXAMPLE: MQTT_EVENT_CONNECTED[0m
+[0;32mI (6556) MQTT_EXAMPLE: sent publish successful, msg_id=54719[0m
+[0;32mI (6556) MQTT_EXAMPLE: sent subscribe successful, msg_id=30273[0m
+[0;32mI (6566) MQTT_EXAMPLE: sent subscribe successful, msg_id=62005[0m
+[0;32mI (6566) MQTT_EXAMPLE: sent unsubscribe successful, msg_id=19757[0m
+[0;32mI (6866) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=54719[0m
+[0;32mI (7126) MQTT_EXAMPLE: MQTT_EVENT_SUBSCRIBED, msg_id=30273[0m
+[0;32mI (7126) MQTT_EXAMPLE: sent publish successful, msg_id=0[0m
+[0;32mI (7136) MQTT_EXAMPLE: MQTT_EVENT_SUBSCRIBED, msg_id=62005[0m
+[0;32mI (7136) MQTT_EXAMPLE: sent publish successful, msg_id=0[0m
+[0;32mI (7146) MQTT_EXAMPLE: MQTT_EVENT_UNSUBSCRIBED, msg_id=19757[0m
+[0;32mI (7146) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA={
+  "msg": "1"
+}
+[0;32mI (7376) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=data
+[0;32mI (7606) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=52638[0m
+[0;32mI (7616) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=data
+[0;32mI (7616) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (7886) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=9306[0m
+[0;32mI (7896) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (8196) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=9611[0m
+[0;32mI (8196) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=48047[0m
+[0;32mI (8206) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (8206) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (8506) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=10557[0m
+[0;32mI (8506) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (8806) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=41823[0m
+[0;32mI (8816) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=38945[0m
+[0;32mI (8816) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (8826) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (9116) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=11676[0m
+[0;32mI (9126) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (9426) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=30305[0m
+[0;32mI (9426) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=45605[0m
+[0;32mI (9436) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (9436) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (9736) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=63707[0m
+[0;32mI (9736) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (10036) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=29174[0m
+[0;32mI (10046) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=36963[0m
+[0;32mI (10046) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (10056) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (10356) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=39659[0m
+[0;32mI (10366) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (10656) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=51149[0m
+[0;32mI (10656) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=60809[0m
+[0;32mI (10666) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (10666) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (10956) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=20836[0m
+[0;32mI (10966) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (12186) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=14593[0m
+[0;32mI (12196) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=31611[0m
+[0;32mI (12196) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (12206) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (12216) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=data
+[0;32mI (12696) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=28055[0m
+[0;32mI (12706) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (12716) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (12716) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=data
+[0;32mI (12726) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=35432[0m
+[0;32mI (13006) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=57071[0m
+[0;32mI (13016) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=40916[0m
+[0;32mI (13016) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (13026) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (13036) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (13046) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=62864[0m
+[0;32mI (13046) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (13316) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=14118[0m
+[0;32mI (13316) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=16530[0m
+[0;32mI (13326) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (13326) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (13626) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=8717[0m
+[0;32mI (13626) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=54745[0m
+[0;32mI (13626) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=11085[0m
+[0;32mI (13636) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=42046[0m
+[0;32mI (13636) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (13646) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (13656) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (13666) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (13826) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=60668[0m
+[0;32mI (13836) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=1532[0m
+[0;32mI (13836) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (13846) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (14136) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=33338[0m
+[0;32mI (14136) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=61262[0m
+[0;32mI (14146) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=48947[0m
+[0;32mI (14146) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=51119[0m
+[0;32mI (14156) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (14166) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (14166) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (14176) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (14446) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=47779[0m
+[0;32mI (14446) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=12052[0m
+[0;32mI (14446) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (14456) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (14746) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=42491[0m
+[0;32mI (14756) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=43773[0m
+[0;32mI (14756) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=28480[0m
+[0;32mI (14756) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=41923[0m
+[0;32mI (14766) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (14776) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (14786) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (14796) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (15056) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=55307[0m
+[0;32mI (15056) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=2849[0m
+[0;32mI (15066) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (15066) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (15366) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=24076[0m
+[0;32mI (15366) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=42892[0m
+[0;32mI (15366) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=30984[0m
+[0;32mI (15376) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=32655[0m
+[0;32mI (15376) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (15386) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (15396) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (15406) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (15666) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=38126[0m
+[0;32mI (15676) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=58223[0m
+[0;32mI (15676) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (15686) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (15976) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=49025[0m
+[0;32mI (15986) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=65360[0m
+[0;32mI (15986) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=46671[0m
+[0;32mI (15996) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=10550[0m
+[0;32mI (15996) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (16006) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (16016) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (16026) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (16036) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA={
+  "msg": "hello esp32"
+}
+[0;32mI (16386) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=45977[0m
+[0;32mI (16386) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=41156[0m
+[0;32mI (16396) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (16406) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (16696) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=18061[0m
+[0;32mI (16706) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=44956[0m
+[0;32mI (16706) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=14281[0m
+[0;32mI (16716) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=60920[0m
+[0;32mI (16716) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=3075[0m
+[0;32mI (16726) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (16736) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (16746) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (16756) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (16756) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (16996) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=30685[0m
+[0;32mI (17006) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=26598[0m
+[0;32mI (17006) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (17016) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (17306) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=34521[0m
+[0;32mI (17316) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=20084[0m
+[0;32mI (17316) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=12773[0m
+[0;32mI (17326) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=55387[0m
+[0;32mI (17326) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=4305[0m
+[0;32mI (17336) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (17346) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (17356) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (17356) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (17366) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (17626) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=26059[0m
+[0;32mI (17626) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=58461[0m
+[0;32mI (17626) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (17636) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (17926) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=1955[0m
+[0;32mI (17926) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=56982[0m
+[0;32mI (17936) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=25935[0m
+[0;32mI (17936) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=6217[0m
+[0;32mI (17946) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=22692[0m
+[0;32mI (17946) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (17956) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (17966) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (17976) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (17986) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (18236) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=64726[0m
+[0;32mI (18236) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=26741[0m
+[0;32mI (18236) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (18246) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (18536) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=17214[0m
+[0;32mI (18546) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=13647[0m
+[0;32mI (18546) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=62025[0m
+[0;32mI (18546) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=8375[0m
+[0;32mI (18556) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=39745[0m
+[0;32mI (18566) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (18566) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (18576) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (18586) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (18596) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (18846) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=59361[0m
+[0;32mI (18846) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=8676[0m
+[0;32mI (18856) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (18856) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (19046) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=data
+[0;32mI (19256) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=44368[0m
+[0;32mI (19256) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=46620[0m
+[0;32mI (19266) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=11458[0m
+[0;32mI (19266) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=6415[0m
+[0;32mI (19276) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=29588[0m
+[0;32mI (19276) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (19286) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (19296) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (19306) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (19316) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (19456) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=data
+[0;32mI (19476) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=54684[0m
+[0;32mI (19486) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=13768[0m
+[0;32mI (19486) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=45032[0m
+[0;32mI (19486) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (19496) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (19506) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (19666) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=59924[0m
+[0;32mI (19666) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (20396) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=59351[0m
+[0;32mI (20406) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=53174[0m
+[0;32mI (20406) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=59684[0m
+[0;32mI (20406) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=1287[0m
+[0;32mI (20416) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=5067[0m
+[0;32mI (20416) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (20426) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (20436) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (20446) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (20456) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (20696) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=38744[0m
+[0;32mI (20696) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=20831[0m
+[0;32mI (20696) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=33867[0m
+[0;32mI (20706) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=26220[0m
+[0;32mI (20706) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (20716) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (20726) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (20736) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (20746) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (21306) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=59941[0m
+[0;32mI (21316) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=23404[0m
+[0;32mI (21316) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=45628[0m
+[0;32mI (21316) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=28003[0m
+[0;32mI (21326) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=6989[0m
+[0;32mI (21336) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (21346) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (21346) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (21356) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (21366) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (21916) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=59612[0m
+[0;32mI (21926) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=47371[0m
+[0;32mI (21926) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=29895[0m
+[0;32mI (21936) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=13128[0m
+[0;32mI (21936) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=18048[0m
+[0;32mI (21946) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (21956) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (21956) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (21966) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (21976) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (22096) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=12938[0m
+[0;32mI (22736) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (22746) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=9099[0m
+[0;32mI (22746) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=26221[0m
+[0;32mI (22746) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=7289[0m
+[0;32mI (22756) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=47414[0m
+[0;32mI (22756) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (22766) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (22776) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (22786) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (22796) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (23046) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=7023[0m
+[0;32mI (23046) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=7758[0m
+[0;32mI (23056) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=53858[0m
+[0;32mI (23056) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=8088[0m
+[0;32mI (23056) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=19660[0m
+[0;32mI (23066) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (23076) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (23086) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (23096) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (23096) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (23106) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=32406[0m
+[0;32mI (23346) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (23666) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=8828[0m
+[0;32mI (23676) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=17487[0m
+[0;32mI (23676) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=24421[0m
+[0;32mI (23686) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=36173[0m
+[0;32mI (23686) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=46869[0m
+[0;32mI (23696) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (23696) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (23706) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (23716) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (23726) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (24376) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=9383[0m
+[0;32mI (24386) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=8100[0m
+[0;32mI (24386) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=30165[0m
+[0;32mI (24396) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=46105[0m
+[0;32mI (24396) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=12411[0m
+[0;32mI (24596) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (24596) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (24606) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (24616) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (24616) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (24626) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (25196) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=42373[0m
+[0;32mI (25196) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (25206) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=6226[0m
+[0;32mI (25216) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=45149[0m
+[0;32mI (25216) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=20[0m
+[0;32mI (25226) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=8769[0m
+[0;32mI (25226) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=56699[0m
+[0;32mI (25236) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (25246) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (25256) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (25266) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (25266) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (25276) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (25546) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=20157[0m
+[0;32mI (25546) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=21889[0m
+[0;32mI (25806) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=64936[0m
+[0;32mI (25806) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=58456[0m
+[0;32mI (25816) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=17080[0m
+[0;32mI (25816) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=505[0m
+[0;32mI (25826) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (25836) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (25846) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (25846) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (25856) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (25866) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (25876) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=4733[0m
+[0;32mI (25876) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (26426) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=56788[0m
+[0;32mI (26426) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=28015[0m
+[0;32mI (26436) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=17136[0m
+[0;32mI (26436) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=64389[0m
+[0;32mI (26446) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=58703[0m
+[0;32mI (26446) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=59181[0m
+[0;32mI (26596) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (26606) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (26606) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (26616) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (26626) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (26636) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (26636) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=27936[0m
+[0;32mI (26646) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (27036) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=35065[0m
+[0;32mI (27036) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=40582[0m
+[0;32mI (27046) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=53858[0m
+[0;32mI (27046) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=29019[0m
+[0;32mI (27056) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=17717[0m
+[0;32mI (27056) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=29340[0m
+[0;32mI (27096) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (27106) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (27106) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (27116) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (27126) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (27136) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (27146) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=28363[0m
+[0;32mI (27146) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (27696) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=25321[0m
+[0;32mI (27706) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=39426[0m
+[0;32mI (27706) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=36376[0m
+[0;32mI (27706) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=34984[0m
+[0;32mI (27716) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=33751[0m
+[0;32mI (27726) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=45885[0m
+[0;32mI (27846) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (27846) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (27856) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (27866) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (27866) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (27876) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (27886) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=10136[0m
+[0;32mI (27896) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (28476) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=26654[0m
+[0;32mI (28476) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=6951[0m
+[0;32mI (28486) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=58669[0m
+[0;32mI (28486) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=57310[0m
+[0;32mI (28496) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=11024[0m
+[0;32mI (28496) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=23019[0m
+[0;32mI (28506) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (28516) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (28526) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (28536) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (28536) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (28546) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (28556) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (29116) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=62957[0m
+[0;32mI (29126) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=55656[0m
+[0;32mI (29126) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=64856[0m
+[0;32mI (29126) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=9376[0m
+[0;32mI (29136) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=23049[0m
+[0;32mI (29136) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=59598[0m
+[0;32mI (29286) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (29296) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (29296) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (29306) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (29316) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (29326) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (29336) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA={
+  "msg": "hello esp32"
+}
+[0;32mI (29336) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=4026[0m
+[0;32mI (29346) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (29356) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=26224[0m
+[0;32mI (29356) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (29916) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=51428[0m
+[0;32mI (29916) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=61156[0m
+[0;32mI (29926) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=8826[0m
+[0;32mI (29926) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=62519[0m
+[0;32mI (29936) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=4298[0m
+[0;32mI (29936) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=15839[0m
+[0;32mI (30096) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (30106) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (30106) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (30116) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (30126) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (30136) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (30146) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (30436) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=36102[0m
+[0;32mI (30436) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=37523[0m
+[0;32mI (30446) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=25883[0m
+[0;32mI (30446) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (30456) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (30466) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (31036) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=34155[0m
+[0;32mI (31036) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=21461[0m
+[0;32mI (31036) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=5185[0m
+[0;32mI (31046) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=44282[0m
+[0;32mI (31046) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=7460[0m
+[0;32mI (31056) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=46029[0m
+[0;32mI (31096) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (31106) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (31106) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (31116) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (31126) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (31136) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (31946) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=56934[0m
+[0;32mI (31956) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (31966) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=63350[0m
+[0;32mI (31966) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=1135[0m
+[0;32mI (31966) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=2336[0m
+[0;32mI (31976) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=46362[0m
+[0;32mI (31986) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=7303[0m
+[0;32mI (31986) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=60944[0m
+[0;32mI (31996) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (32006) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (32016) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (32016) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (32026) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (32036) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (32256) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=28353[0m
+[0;32mI (32266) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=16713[0m
+[0;32mI (32266) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=51455[0m
+[0;32mI (32266) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (32276) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (32286) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (32296) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=55927[0m
+[0;32mI (32296) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (32626) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=56740[0m
+[0;32mI (32626) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=14132[0m
+[0;32mI (32876) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=6980[0m
+[0;32mI (32876) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=21299[0m
+[0;32mI (32886) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=17839[0m
+[0;32mI (32886) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (32896) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (32896) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (32906) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (32916) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (32926) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (32936) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=60340[0m
+[0;32mI (32936) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (33386) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=58097[0m
+[0;32mI (33386) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=18138[0m
+[0;32mI (33396) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=5986[0m
+[0;32mI (33396) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=60914[0m
+[0;32mI (33696) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=9711[0m
+[0;32mI (33696) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=60852[0m
+[0;32mI (33696) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (33706) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (33716) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (33726) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (33736) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (33736) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (33896) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=45682[0m
+[0;32mI (33906) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=56998[0m
+[0;32mI (33906) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=43388[0m
+[0;32mI (33916) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=13717[0m
+[0;32mI (33916) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (33926) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (33936) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (33946) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (33956) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (33956) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=29046[0m
+[0;32mI (34206) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (34526) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=19664[0m
+[0;32mI (34536) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=37521[0m
+[0;32mI (34536) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=27884[0m
+[0;32mI (34536) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=52400[0m
+[0;32mI (34546) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=45098[0m
+[0;32mI (34556) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=11550[0m
+[0;32mI (34596) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (34596) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (34606) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (34616) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (34626) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (34626) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (34826) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (34826) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=3877[0m
+[0;32mI (34836) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (35336) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=54807[0m
+[0;32mI (35336) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=38090[0m
+[0;32mI (35336) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=31422[0m
+[0;32mI (35346) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=48399[0m
+[0;32mI (35346) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=45448[0m
+[0;32mI (35356) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (35366) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (35376) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (35386) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (35386) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (35846) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=14686[0m
+[0;32mI (35846) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=4280[0m
+[0;32mI (35856) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=7281[0m
+[0;32mI (35856) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=54437[0m
+[0;32mI (35856) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=20303[0m
+[0;32mI (35866) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (35876) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (35886) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (35896) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (35906) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (35906) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=58409[0m
+[0;32mI (36456) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (36466) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=data
+[0;32mI (36766) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=data
+[0;32mI (36776) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=2776[0m
+[0;32mI (36776) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=6640[0m
+[0;32mI (36776) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=6107[0m
+[0;32mI (36786) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=30794[0m
+[0;32mI (36786) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=33675[0m
+[0;32mI (36796) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=48194[0m
+[0;32mI (36806) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (36816) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (36816) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (36826) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (36836) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (36846) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (36856) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (36866) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=21508[0m
+[0;32mI (37066) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=64392[0m
+[0;32mI (37076) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (37076) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (37086) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=60009[0m
+[0;32mI (37096) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (37276) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=19438[0m
+[0;32mI (37286) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=26484[0m
+[0;32mI (37286) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=31360[0m
+[0;32mI (37286) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=18830[0m
+[0;32mI (37296) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (37306) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (37316) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (37326) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (37386) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (37886) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=19041[0m
+[0;32mI (37896) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=17533[0m
+[0;32mI (37896) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=59369[0m
+[0;32mI (37906) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=37126[0m
+[0;32mI (37906) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=42098[0m
+[0;32mI (37916) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (37926) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (37936) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (37946) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (37946) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (37956) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=19817[0m
+[0;32mI (37966) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (38206) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=44754[0m
+[0;32mI (38206) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (39116) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=61056[0m
+[0;32mI (39126) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=43192[0m
+[0;32mI (39136) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=63033[0m
+[0;32mI (39136) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=63641[0m
+[0;32mI (39136) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=29774[0m
+[0;32mI (39146) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=58974[0m
+[0;32mI (39156) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=14918[0m
+[0;32mI (39356) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=53560[0m
+[0;32mI (39356) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (39366) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (39366) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (39376) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (39386) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (39396) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (39406) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (39416) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (39416) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (39426) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=60953[0m
+[0;32mI (39436) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=29873[0m
+[0;32mI (39436) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=15070[0m
+[0;32mI (39446) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (39456) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (39466) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (39936) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=903[0m
+[0;32mI (39946) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=64861[0m
+[0;32mI (39946) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=48775[0m
+[0;32mI (39946) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=40205[0m
+[0;32mI (39956) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=62828[0m
+[0;32mI (39966) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (39976) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (39976) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (39986) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (39996) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (40096) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (40556) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=20457[0m
+[0;32mI (40566) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=57418[0m
+[0;32mI (40576) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=16590[0m
+[0;32mI (40576) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=25269[0m
+[0;32mI (40576) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=36631[0m
+[0;32mI (40586) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=8328[0m
+[0;32mI (40596) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (40606) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (40606) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (40616) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (40626) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (40636) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (40756) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=4726[0m
+[0;32mI (40766) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (40766) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (40966) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=5016[0m
+[0;32mI (40966) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (42086) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=42067[0m
+[0;32mI (42096) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=13125[0m
+[0;32mI (42096) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=44838[0m
+[0;32mI (42106) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=3820[0m
+[0;32mI (42106) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=26025[0m
+[0;32mI (42116) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=6321[0m
+[0;32mI (42116) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=16303[0m
+[0;32mI (42606) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=13157[0m
+[0;32mI (42606) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=62737[0m
+[0;32mI (42616) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=48044[0m
+[0;32mI (42616) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=17279[0m
+[0;32mI (42626) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (42636) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (42646) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (42656) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (42656) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (42666) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (42676) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (42686) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (42696) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (42706) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (42706) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (42716) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=52934[0m
+[0;32mI (42726) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (42736) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=40884[0m
+[0;32mI (42906) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=24999[0m
+[0;32mI (42916) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=577[0m
+[0;32mI (42916) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=63578[0m
+[0;32mI (42916) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=27710[0m
+[0;32mI (42926) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (42936) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (42946) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (42956) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (42966) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (42976) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (43426) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=3259[0m
+[0;32mI (43436) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=23653[0m
+[0;32mI (43436) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=36652[0m
+[0;32mI (43446) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=17342[0m
+[0;32mI (43446) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=25694[0m
+[0;32mI (43456) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=30193[0m
+[0;32mI (43736) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (43746) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (43746) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (43756) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (43766) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (43766) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (43776) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=45754[0m
+[0;32mI (43786) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=61931[0m
+[0;32mI (43786) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (43796) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (43806) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=37496[0m
+[0;32mI (43816) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (43826) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (43936) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=41652[0m
+[0;32mI (43936) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (45166) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=777[0m
+[0;32mI (45166) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=46994[0m
+[0;32mI (45166) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=8200[0m
+[0;32mI (45176) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=60395[0m
+[0;32mI (45176) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=54131[0m
+[0;32mI (45186) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=35908[0m
+[0;32mI (45346) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=5688[0m
+[0;32mI (45676) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=21549[0m
+[0;32mI (45676) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=29225[0m
+[0;32mI (45676) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=49901[0m
+[0;32mI (45686) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=9045[0m
+[0;32mI (45686) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (45696) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (45706) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (45716) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (45726) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (45736) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (45736) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (45746) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (45756) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (45766) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (45776) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (45976) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=15382[0m
+[0;32mI (45986) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=13821[0m
+[0;32mI (45986) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=6300[0m
+[0;32mI (45996) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=59268[0m
+[0;32mI (45996) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=15734[0m
+[0;32mI (46006) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=30789[0m
+[0;32mI (46016) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (46016) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (46026) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (46036) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (46046) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (46056) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (46056) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (46066) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=4669[0m
+[0;32mI (46076) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (46906) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=7656[0m
+[0;32mI (46906) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=42786[0m
+[0;32mI (46906) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=59957[0m
+[0;32mI (46916) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=39209[0m
+[0;32mI (46916) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=47303[0m
+[0;32mI (46926) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=28998[0m
+[0;32mI (47206) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=1538[0m
+[0;32mI (47216) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=32300[0m
+[0;32mI (47216) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=23214[0m
+[0;32mI (47216) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=10312[0m
+[0;32mI (47226) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (47236) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (47246) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (47246) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (47256) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (47266) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (47276) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (47286) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (47296) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (47296) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (47316) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (47316) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=9272[0m
+[0;32mI (47326) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (48126) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=49993[0m
+[0;32mI (48136) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=38178[0m
+[0;32mI (48136) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=20903[0m
+[0;32mI (48146) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=43404[0m
+[0;32mI (48146) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=31941[0m
+[0;32mI (48156) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=59819[0m
+[0;32mI (48346) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=30272[0m
+[0;32mI (48356) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=21169[0m
+[0;32mI (48356) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=6781[0m
+[0;32mI (48356) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=19653[0m
+[0;32mI (48366) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (48376) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (48386) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (48386) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (48396) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (48406) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (48416) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (48426) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (48436) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (48436) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=message received
+[0;32mI (48976) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=49022[0m

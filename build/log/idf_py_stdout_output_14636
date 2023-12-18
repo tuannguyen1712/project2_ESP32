@@ -1,0 +1,587 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15584
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 14 2023 20:49:58[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2712ch (160044) map[0m
+[0;32mI (163) esp_image: segment 1: paddr=00037154 vaddr=3ffb0000 size=03790h ( 14224) load[0m
+[0;32mI (168) esp_image: segment 2: paddr=0003a8ec vaddr=40080000 size=0572ch ( 22316) load[0m
+[0;32mI (178) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9aa34h (633396) map[0m
+[0;32mI (407) esp_image: segment 4: paddr=000daa5c vaddr=4008572c size=10d1ch ( 68892) load[0m
+[0;32mI (447) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (447) boot: Disabling RNG early entropy source...[0m
+[0;32mI (458) cpu_start: Multicore app[0m
+[0;32mI (459) cpu_start: Pro cpu up.[0m
+[0;32mI (459) cpu_start: Starting app cpu, entry point is 0x40081458[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (477) cpu_start: Pro cpu start user code[0m
+[0;32mI (477) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (477) cpu_start: Application information:[0m
+[0;32mI (482) cpu_start: Project name:     mqtt_tcp[0m
+[0;32mI (487) cpu_start: App version:      1[0m
+[0;32mI (491) cpu_start: Compile time:     Dec 13 2023 18:53:11[0m
+[0;32mI (497) cpu_start: ELF file SHA256:  1a01bfb7f54aeaae...[0m
+[0;32mI (503) cpu_start: ESP-IDF:          v5.1.1-dirty[0m
+[0;32mI (508) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (513) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (518) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (523) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (530) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (536) heap_init: At 3FFB7E58 len 000281A8 (160 KiB): DRAM[0m
+[0;32mI (542) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (549) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (555) heap_init: At 40096448 len 00009BB8 (38 KiB): IRAM[0m
+[0;32mI (563) spi_flash: detected chip: generic[0m
+[0;32mI (566) spi_flash: flash io: dio[0m
+[0;32mI (571) app_start: Starting scheduler on CPU0[0m
+[0;32mI (575) app_start: Starting scheduler on CPU1[0m
+[0;32mI (575) main_task: Started on CPU0[0m
+[0;32mI (585) main_task: Calling app_main()[0m
+[0;32mI (585) MQTT_EXAMPLE: [APP] Startup..[0m
+[0;32mI (585) MQTT_EXAMPLE: [APP] Free memory: 279288 bytes[0m
+[0;32mI (595) MQTT_EXAMPLE: [APP] IDF version: v5.1.1-dirty[0m
+[0;32mI (615) example_connect: Start example_connect.[0m
+I (635) wifi:wifi driver task: 3ffbf9b0, prio:23, stack:6656, core=0
+I (635) wifi:wifi firmware version: ce9244d
+I (635) wifi:wifi certification version: v7.0
+I (635) wifi:config NVS flash: enabled
+I (635) wifi:config nano formating: disabled
+I (645) wifi:Init data frame dynamic rx buffer num: 32
+I (645) wifi:Init management frame dynamic rx buffer num: 32
+I (655) wifi:Init management short buffer num: 32
+I (655) wifi:Init dynamic tx buffer num: 32
+I (655) wifi:Init static rx buffer size: 1600
+I (665) wifi:Init static rx buffer num: 10
+I (665) wifi:Init dynamic rx buffer num: 32
+[0;32mI (675) wifi_init: rx ba win: 6[0m
+[0;32mI (675) wifi_init: tcpip mbox: 32[0m
+[0;32mI (675) wifi_init: udp mbox: 6[0m
+[0;32mI (685) wifi_init: tcp mbox: 6[0m
+[0;32mI (685) wifi_init: tcp tx win: 5744[0m
+[0;32mI (695) wifi_init: tcp rx win: 5744[0m
+[0;32mI (695) wifi_init: tcp mss: 1440[0m
+[0;32mI (695) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (705) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (715) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (825) wifi:mode : sta (24:dc:c3:a6:d0:28)
+I (825) wifi:enable tsf
+[0;32mI (835) example_connect: Connecting to Infrastructure NW...[0m
+[0;32mI (835) example_connect: Waiting for IP(s)[0m
+I (3245) wifi:new:<12,0>, old:<1,0>, ap:<255,255>, sta:<12,0>, prof:1
+I (4405) wifi:state: init -> auth (b0)
+I (4415) wifi:state: auth -> assoc (0)
+I (4425) wifi:state: assoc -> run (10)
+W (4425) wifi:[ADDBA]rx delba, code:39, delete tid:0
+W (4425) wifi:[ADDBA]rx delba, code:39, delete tid:0
+W (4435) wifi:[ADDBA]rx delba, code:39, delete tid:5
+I (4435) wifi:<ba-add>idx:0 (ifx:0, 24:0b:2a:2e:69:79), tid:5, ssn:1, winSize:64
+I (4535) wifi:<ba-add>idx:1 (ifx:0, 24:0b:2a:2e:69:79), tid:0, ssn:21, winSize:64
+I (4535) wifi:connected with Infrastructure NW, aid = 7, channel 12, BW20, bssid = 24:0b:2a:2e:69:79
+I (4535) wifi:security: WPA2-PSK, phy: bgn, rssi: -63
+I (4545) wifi:pm start, type: 1
+
+I (4615) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (5545) esp_netif_handlers: example_netif_sta ip: 192.168.1.3, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (5545) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.1.3[0m
+[0;32mI (5615) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:26dc:c3ff:fea6:d028, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (5615) example_common: Connected to example_netif_sta[0m
+[0;32mI (5625) example_common: - IPv4 address: 192.168.1.3,[0m
+[0;32mI (5625) example_common: - IPv6 address: fe80:0000:0000:0000:26dc:c3ff:fea6:d028, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (5635) uart: queue free spaces: 20[0m
+[0;32mI (5645) uart: queue free spaces: 20[0m
+[0;32mI (5655) MQTT_EXAMPLE: Other event id:7[0m
+[0;32mI (5655) main_task: Returned from app_main()[0m
+[0;32mI (5735) MQTT_EXAMPLE: MQTT_EVENT_CONNECTED[0m
+[0;32mI (5765) MQTT_EXAMPLE: MQTT_EVENT_SUBSCRIBED, msg_id=15142[0m
+[0;32mI (8075) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (8075) MQTT_EXAMPLE: [UART DATA]: 83[0m
+[0;32mI (18075) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (18075) MQTT_EXAMPLE: [UART DATA]: 83[0m
+[0;32mI (28075) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (28075) MQTT_EXAMPLE: [UART DATA]: 83[0m
+[0;32mI (38075) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (38085) MQTT_EXAMPLE: [UART DATA]: 83[0m
+[0;32mI (48075) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (48075) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (58085) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (58085) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (68085) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (68085) MQTT_EXAMPLE: [UART DATA]: 82[0m
+I (825) wifi:mode : sta (24:dc:c3:a6:d0:28)
+I (825) wifi:enable tsf
+[0;32mI (835) example_connect: Connecting to Infrastructure NW...[0m
+[0;32mI (835) example_connect: Waiting for IP(s)[0m
+I (3245) wifi:new:<12,0>, old:<1,0>, ap:<255,255>, sta:<12,0>, prof:1
+I (4405) wifi:state: init -> auth (b0)
+I (5405) wifi:state: auth -> init (200)
+I (5415) wifi:new:<12,0>, old:<12,0>, ap:<255,255>, sta:<12,0>, prof:1
+[0;32mI (5415) example_connect: Wi-Fi disconnected, trying to reconnect...[0m
+[0;32mI (7825) example_connect: Wi-Fi disconnected, trying to reconnect...[0m
+I (10245) wifi:new:<12,0>, old:<12,0>, ap:<255,255>, sta:<12,0>, prof:1
+I (10245) wifi:state: init -> auth (b0)
+I (11245) wifi:state: auth -> init (200)
+I (11245) wifi:new:<12,0>, old:<12,0>, ap:<255,255>, sta:<12,0>, prof:1
+[0;32mI (11245) example_connect: Wi-Fi disconnected, trying to reconnect...[0m
+[0;32mI (13665) example_connect: Wi-Fi disconnected, trying to reconnect...[0m
+I (16075) wifi:new:<12,0>, old:<12,0>, ap:<255,255>, sta:<12,0>, prof:1
+I (16075) wifi:state: init -> auth (b0)
+I (16085) wifi:state: auth -> assoc (0)
+I (16095) wifi:state: assoc -> run (10)
+W (16095) wifi:[ADDBA]rx delba, code:39, delete tid:0
+W (16095) wifi:[ADDBA]rx delba, code:39, delete tid:0
+W (16095) wifi:[ADDBA]rx delba, code:39, delete tid:5
+I (16105) wifi:<ba-add>idx:0 (ifx:0, 24:0b:2a:2e:69:79), tid:5, ssn:2, winSize:64
+I (16195) wifi:<ba-add>idx:1 (ifx:0, 24:0b:2a:2e:69:79), tid:0, ssn:47, winSize:64
+I (16205) wifi:connected with Infrastructure NW, aid = 7, channel 12, BW20, bssid = 24:0b:2a:2e:69:79
+I (16205) wifi:security: WPA2-PSK, phy: bgn, rssi: -60
+I (16205) wifi:pm start, type: 1
+
+I (16285) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (17615) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:26dc:c3ff:fea6:d028, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (20715) esp_netif_handlers: example_netif_sta ip: 192.168.1.3, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (20715) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.1.3[0m
+[0;32mI (20725) example_common: Connected to example_netif_sta[0m
+[0;32mI (20725) example_common: - IPv4 address: 192.168.1.3,[0m
+[0;32mI (20735) example_common: - IPv6 address: fe80:0000:0000:0000:26dc:c3ff:fea6:d028, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (20745) uart: queue free spaces: 20[0m
+[0;32mI (20745) uart: queue free spaces: 20[0m
+[0;32mI (20755) MQTT_EXAMPLE: Other event id:7[0m
+[0;32mI (20765) main_task: Returned from app_main()[0m
+[0;32mI (20905) MQTT_EXAMPLE: MQTT_EVENT_CONNECTED[0m
+[0;32mI (20945) MQTT_EXAMPLE: MQTT_EVENT_SUBSCRIBED, msg_id=61099[0m
+[0;32mI (26975) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (26975) MQTT_EXAMPLE: uart rx break[0m
+[0;32mI (28015) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (28015) MQTT_EXAMPLE: [UART DATA]: 4[0m
+[0;32mI (88245) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (88245) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (98245) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (98245) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (108245) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (108245) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (118245) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (118245) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (128245) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (128245) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (138245) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (138245) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (148245) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (148245) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (158245) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (158245) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (168245) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (168245) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (178245) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (178245) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (188245) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (188255) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (198245) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (198255) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (208255) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (208255) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (218255) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (218255) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (228255) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (228255) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (238255) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (238255) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (248255) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (248255) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (258255) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (258255) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (268255) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (268255) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (278255) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (278255) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (288255) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (288255) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (298255) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (298255) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (308255) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (308255) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (318255) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (318255) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (328005) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (328005) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (338005) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (338005) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (348005) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (348005) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (358005) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (358005) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (368005) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (368005) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (378005) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (378005) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (388005) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (388015) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (398015) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (398015) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (408015) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (408015) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (418015) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (418015) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (428015) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (428015) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (438015) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (438015) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (448015) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (448015) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (458015) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (458015) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (468015) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (468015) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (478015) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (478015) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (488015) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (488015) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (498015) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (498015) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (508015) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (508015) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (518015) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (518015) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (528015) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (528015) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (538015) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (538025) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (548025) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (548025) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (558025) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (558025) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (568025) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (568025) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (578025) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (578025) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (588025) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (588025) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (598025) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (598025) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (608025) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (608025) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (618025) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (618025) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (628025) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (628025) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (638025) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (638025) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (648025) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (648025) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (658025) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (658025) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (668035) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (668035) MQTT_EXAMPLE: [UART DATA]: 84[0m
+[0;32mI (678025) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (678035) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (688035) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (688035) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (698035) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (698035) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (708035) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (708035) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (718035) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (718035) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (728035) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (728035) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (738035) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (738035) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (748035) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (748035) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (758035) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (758035) MQTT_EXAMPLE: [UART DATA]: 84[0m
+[0;32mI (767795) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (767805) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (777805) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (777805) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (787805) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (787805) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (797805) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (797805) MQTT_EXAMPLE: [UART DATA]: 83[0m
+[0;32mI (807805) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (807805) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (817805) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (817805) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (827805) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (827805) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (837805) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (837805) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (847805) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (847805) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (857805) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (857805) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (867805) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (867805) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (877805) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (877805) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (887805) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (887805) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (897805) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (897805) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (907805) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (907815) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (917815) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (917815) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (927815) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (927815) MQTT_EXAMPLE: [UART DATA]: 84[0m
+[0;32mI (937815) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (937815) MQTT_EXAMPLE: [UART DATA]: 83[0m
+[0;32mI (947815) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (947815) MQTT_EXAMPLE: [UART DATA]: 84[0m
+[0;32mI (957815) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (957815) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (967815) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (967815) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (977815) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (977815) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (987815) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (987815) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (997815) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (997815) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1007815) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1007815) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1017815) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1017815) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1027815) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1027815) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1037815) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1037815) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1047815) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1047825) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1057815) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1057825) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1067825) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1067825) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1077825) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1077825) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1087825) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1087825) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1097825) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1097825) MQTT_EXAMPLE: [UART DATA]: 84[0m
+[0;32mI (1107825) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1107825) MQTT_EXAMPLE: [UART DATA]: 84[0m
+[0;32mI (1117825) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1117825) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1127825) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1127825) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1137825) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1137825) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1147825) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1147825) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1157825) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1157825) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1167825) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1167825) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1177825) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1177825) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1187825) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1187835) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1197835) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1197835) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1207835) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1207835) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1217835) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1217835) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1227835) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1227835) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1237835) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1237835) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1247835) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1247835) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1257835) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1257835) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1267835) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1267835) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1277835) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1277835) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1287835) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1287835) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1297835) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1297835) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1307835) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1307835) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1317835) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1317835) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1327835) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1327835) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1337835) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1337845) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1347625) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1347625) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1357625) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1357625) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1367625) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1367625) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1377625) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1377625) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1387625) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1387625) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1397625) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1397625) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1407625) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1407625) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1417625) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1417625) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1427625) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1427625) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1437475) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1437475) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1447475) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1447475) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (1457485) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1457485) MQTT_EXAMPLE: [UART DATA]: 88[0m
+[0;32mI (1467495) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1467495) MQTT_EXAMPLE: [UART DATA]: 98[0m
+[0;32mI (1477485) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1477485) MQTT_EXAMPLE: [UART DATA]: 88[0m
+[0;32mI (1487485) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1487485) MQTT_EXAMPLE: [UART DATA]: 87[0m
+[0;32mI (1497485) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1497485) MQTT_EXAMPLE: [UART DATA]: 88[0m
+[0;32mI (1507485) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1507485) MQTT_EXAMPLE: [UART DATA]: 88[0m
+[0;32mI (1517485) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1517485) MQTT_EXAMPLE: [UART DATA]: 88[0m
+[0;32mI (1527485) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1527485) MQTT_EXAMPLE: [UART DATA]: 88[0m
+[0;32mI (1537485) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1537485) MQTT_EXAMPLE: [UART DATA]: 88[0m
+[0;32mI (1547485) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1547485) MQTT_EXAMPLE: [UART DATA]: 87[0m
+[0;32mI (1557485) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1557485) MQTT_EXAMPLE: [UART DATA]: 87[0m
+[0;32mI (1567485) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1567495) MQTT_EXAMPLE: [UART DATA]: 87[0m
+[0;32mI (1577495) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1577495) MQTT_EXAMPLE: [UART DATA]: 87[0m
+[0;32mI (1587495) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1587495) MQTT_EXAMPLE: [UART DATA]: 87[0m
+[0;32mI (1597495) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1597495) MQTT_EXAMPLE: [UART DATA]: 87[0m
+[0;32mI (1607495) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1607495) MQTT_EXAMPLE: [UART DATA]: 87[0m
+[0;32mI (1617495) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1617495) MQTT_EXAMPLE: [UART DATA]: 87[0m
+[0;32mI (1627495) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1627495) MQTT_EXAMPLE: [UART DATA]: 86[0m
+[0;32mI (1637495) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1637495) MQTT_EXAMPLE: [UART DATA]: 86[0m
+[0;32mI (1647495) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1647495) MQTT_EXAMPLE: [UART DATA]: 86[0m
+[0;32mI (1657495) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1657495) MQTT_EXAMPLE: [UART DATA]: 86[0m
+[0;32mI (1667495) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1667495) MQTT_EXAMPLE: [UART DATA]: 85[0m
+[0;32mI (1677495) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1677495) MQTT_EXAMPLE: [UART DATA]: 85[0m
+[0;32mI (1687495) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1687495) MQTT_EXAMPLE: [UART DATA]: 85[0m
+[0;32mI (1697495) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1697495) MQTT_EXAMPLE: [UART DATA]: 85[0m
+[0;32mI (1707495) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1707495) MQTT_EXAMPLE: [UART DATA]: 85[0m
+[0;32mI (1717495) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1717495) MQTT_EXAMPLE: [UART DATA]: 85[0m
+[0;32mI (1727495) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1727495) MQTT_EXAMPLE: [UART DATA]: 85[0m
+[0;32mI (1737495) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1737495) MQTT_EXAMPLE: [UART DATA]: 85[0m
+[0;32mI (1747505) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1747505) MQTT_EXAMPLE: [UART DATA]: 85[0m
+[0;32mI (1757505) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1757505) MQTT_EXAMPLE: [UART DATA]: 85[0m
+[0;32mI (1767505) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1767505) MQTT_EXAMPLE: [UART DATA]: 85[0m
+[0;32mI (1777505) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1777505) MQTT_EXAMPLE: [UART DATA]: 85[0m
+[0;32mI (1787505) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1787505) MQTT_EXAMPLE: [UART DATA]: 85[0m
+[0;32mI (1797505) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1797505) MQTT_EXAMPLE: [UART DATA]: 85[0m
+[0;32mI (1807505) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1807505) MQTT_EXAMPLE: [UART DATA]: 85[0m
+[0;32mI (1817505) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1817505) MQTT_EXAMPLE: [UART DATA]: 84[0m
+[0;32mI (1827505) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1827505) MQTT_EXAMPLE: [UART DATA]: 84[0m
+[0;32mI (1837505) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1837505) MQTT_EXAMPLE: [UART DATA]: 84[0m
+[0;32mI (1847505) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1847505) MQTT_EXAMPLE: [UART DATA]: 84[0m
+[0;32mI (1857505) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1857505) MQTT_EXAMPLE: [UART DATA]: 84[0m
+[0;32mI (1867505) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1867505) MQTT_EXAMPLE: [UART DATA]: 84[0m
+[0;32mI (1877505) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1877505) MQTT_EXAMPLE: [UART DATA]: 84[0m
+[0;32mI (1887505) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1887505) MQTT_EXAMPLE: [UART DATA]: 84[0m
+[0;32mI (1897505) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1897515) MQTT_EXAMPLE: [UART DATA]: 84[0m
+[0;32mI (1907505) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1907505) MQTT_EXAMPLE: [UART DATA]: 83[0m
+[0;32mI (1917515) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1917515) MQTT_EXAMPLE: [UART DATA]: 83[0m
+[0;32mI (1927515) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1927515) MQTT_EXAMPLE: [UART DATA]: 83[0m
+[0;32mI (1937515) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1937515) MQTT_EXAMPLE: [UART DATA]: 83[0m
+[0;32mI (1947515) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1947515) MQTT_EXAMPLE: [UART DATA]: 83[0m
+[0;32mI (1957515) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1957515) MQTT_EXAMPLE: [UART DATA]: 83[0m
+[0;32mI (1967515) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1967515) MQTT_EXAMPLE: [UART DATA]: 83[0m
+[0;32mI (1977515) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1977515) MQTT_EXAMPLE: [UART DATA]: 83[0m
+[0;32mI (1987515) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1987515) MQTT_EXAMPLE: [UART DATA]: 83[0m
+[0;32mI (1997335) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (1997335) MQTT_EXAMPLE: [UART DATA]: 83[0m
+[0;32mI (2007335) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (2007335) MQTT_EXAMPLE: [UART DATA]: 83[0m
+[0;32mI (2017335) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (2017335) MQTT_EXAMPLE: [UART DATA]: 83[0m
+[0;32mI (2027335) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (2027335) MQTT_EXAMPLE: [UART DATA]: 83[0m
+[0;32mI (2037335) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (2037335) MQTT_EXAMPLE: [UART DATA]: 83[0m
+[0;32mI (2047335) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (2047335) MQTT_EXAMPLE: [UART DATA]: 83[0m
+[0;32mI (2057335) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (2057335) MQTT_EXAMPLE: [UART DATA]: 83[0m
+[0;32mI (2067335) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (2067335) MQTT_EXAMPLE: [UART DATA]: 83[0m
+[0;32mI (2077335) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (2077335) MQTT_EXAMPLE: [UART DATA]: 83[0m
+[0;32mI (2087335) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (2087335) MQTT_EXAMPLE: [UART DATA]: 83[0m
+[0;32mI (2097335) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (2097335) MQTT_EXAMPLE: [UART DATA]: 83[0m
+[0;32mI (2107335) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (2107345) MQTT_EXAMPLE: [UART DATA]: 83[0m
+[0;32mI (2117335) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (2117335) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (2125325) MQTT_EXAMPLE: uart[2] event:[0m
+[0;32mI (2125325) MQTT_EXAMPLE: [UART DATA]: 82[0m
+[0;32mI (2135325) MQTT_EXAM

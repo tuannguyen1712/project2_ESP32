@@ -1,0 +1,47 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM3 instead...[0m
+[0;33m--- idf_monitor on \\.\COM3 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081458: call_start_cpu1 at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/cpu_start.c:154
+[0m
+[0;33m0x40081abe: panic_abort at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/panic.c:452
+[0m
+[0;33m0x4008999d: esp_system_abort at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/esp_system_chip.c:84
+[0m
+[0;33m0x4008c6e2: vApplicationStackOverflowHook at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:581
+[0m
+[0;33m0x4008b057: vTaskSwitchContext at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/tasks.c:3728
+[0m
+[0;33m0x4008c830: _frxt_dispatch at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:450
+[0m
+[0;33m0x4008c7e2: _frxt_int_exit at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:245
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081458: call_start_cpu1 at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/cpu_start.c:154
+[0m
+[0;33m0x400d7b62: app_main at D:/ESP_IDF/ESP32_project/tcp/main/app_main.c:363 (discriminator 1)
+[0m
+[0;33m0x40089993: _esp_error_check_failed at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/esp_err.c:50
+[0m
+[0;33m0x40081abe: panic_abort at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/panic.c:452
+[0m
+[0;33m0x4008999d: esp_system_abort at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/esp_system_chip.c:84
+[0m
+[0;33m0x40090a7a: abort at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/newlib/abort.c:38
+[0m
+[0;33m0x40089993: _esp_error_check_failed at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/esp_err.c:50
+[0m
+[0;33m0x400d7b62: app_main at D:/ESP_IDF/ESP32_project/tcp/main/app_main.c:363 (discriminator 1)
+[0m
+[0;33m0x40168bfb: main_task at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x4008c3b1: vPortTaskWrapper at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081458: call_start_cpu1 at D:/ESP_IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/cpu_start.c:154
+[0m
+[0m

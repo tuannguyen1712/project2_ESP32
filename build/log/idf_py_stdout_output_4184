@@ -1,0 +1,139 @@
+ (500) cpu_��+ښ�j%�(554) spi_flash: detected chip: generic[0m
+[0;32mI (557) spi_flash: flash io: dio[0m
+[0;32�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15584
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 14 2023 20:49:58[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=25ae4h (154340) map[0m
+[0;32mI (161) esp_image: segment 1: paddr=00035b0c vaddr=3ffb0000 size=03738h ( 14136) load[0m
+[0;32mI (166) esp_image: segment 2: paddr=0003924c vaddr=40080000 size=06dcch ( 28108) load[0m
+[0;32mI (178) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9780ch (620556) map[0m
+[0;32mI (403) esp_image: segment 4: paddr=000d7834 vaddr=40086dcc size=0e914h ( 59668) load[0m
+[0;32mI (438) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (438) boot: Disabling RNG early entropy source...[0m
+[0;32mI (450) cpu_start: Multicore app[0m
+[0;32mI (450) cpu_start: Pro cpu up.[0m
+[0;32mI (450) cpu_start: Starting app cpu, entry point is 0x4008137c[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (468) cpu_start: Pro cpu start user code[0m
+[0;32mI (468) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (468) cpu_start: Application information:[0m
+[0;32mI (473) cpu_start: Project name:     mqtt_tcp[0m
+[0;32mI (478) cpu_start: App version:      1[0m
+[0;32mI (482) cpu_start: Compile time:     Oct 17 2023 10:05:26[0m
+[0;32mI (489) cpu_start: ELF file SHA256:  30c62017ba036dff...[0m
+[0;32mI (495) cpu_start: ESP-IDF:          v5.1.1-dirty[0m
+[0;32mI (500) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (505) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (509) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (514) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (522) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (527) heap_init: At 3FFB7DF0 len 00028210 (160 KiB): DRAM[0m
+[0;32mI (534) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (540) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (547) heap_init: At 400956E0 len 0000A920 (42 KiB): IRAM[0m
+[0;32mI (554) spi_flash: detected chip: generic[0m
+[0;32mI (557) spi_flash: flash io: dio[0m
+[0;32mI (562) app_start: Starting scheduler on CPU0[0m
+[0;32mI (566) app_start: Starting scheduler on CPU1[0m
+[0;32mI (566) main_task: Started on CPU0[0m
+[0;32mI (576) main_task: Calling app_main()[0m
+[0;32mI (576) MQTT_EXAMPLE: [APP] Startup..[0m
+[0;32mI (576) MQTT_EXAMPLE: [APP] Free memory: 279392 bytes[0m
+[0;32mI (586) MQTT_EXAMPLE: [APP] IDF version: v5.1.1-dirty[0m
+[0;32mI (606) example_connect: Start example_connect.[0m
+I (626) wifi:wifi driver task: 3ffbf948, prio:23, stack:6656, core=0
+I (626) wifi:wifi firmware version: ce9244d
+I (626) wifi:wifi certification version: v7.0
+I (626) wifi:config NVS flash: enabled
+I (626) wifi:config nano formating: disabled
+I (636) wifi:Init data frame dynamic rx buffer num: 32
+I (636) wifi:Init management frame dynamic rx buffer num: 32
+I (646) wifi:Init management short buffer num: 32
+I (646) wifi:Init dynamic tx buffer num: 32
+I (646) wifi:Init static rx buffer size: 1600
+I (656) wifi:Init static rx buffer num: 10
+I (656) wifi:Init dynamic rx buffer num: 32
+[0;32mI (666) wifi_init: rx ba win: 6[0m
+[0;32mI (666) wifi_init: tcpip mbox: 32[0m
+[0;32mI (666) wifi_init: udp mbox: 6[0m
+[0;32mI (676) wifi_init: tcp mbox: 6[0m
+[0;32mI (676) wifi_init: tcp tx win: 5744[0m
+[0;32mI (686) wifi_init: tcp rx win: 5744[0m
+[0;32mI (686) wifi_init: tcp mss: 1440[0m
+[0;32mI (686) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (696) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (696) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (816) wifi:mode : sta (24:dc:c3:a6:d0:28)
+I (816) wifi:enable tsf
+[0;32mI (826) example_connect: Connecting to AiThings...[0m
+[0;32mI (826) example_connect: Waiting for IP(s)[0m
+I (3236) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1
+I (4396) wifi:state: init -> auth (b0)
+I (4396) wifi:state: auth -> assoc (0)
+I (4406) wifi:state: assoc -> run (10)
+W (4506) wifi:[ADDBA]rx delba, code:39, delete tid:0
+W (4516) wifi:[ADDBA]rx delba, code:39, delete tid:5
+W (4526) wifi:[ADDBA]rx delba, code:39, delete tid:6
+I (4546) wifi:connected with AiThings, aid = 1, channel 10, BW20, bssid = 3c:a7:ae:fd:b2:dd
+I (4546) wifi:security: WPA2-PSK, phy: bgn, rssi: -48
+I (4546) wifi:pm start, type: 1
+
+I (4616) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (5606) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:26dc:c3ff:fea6:d028, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+I (6686) wifi:<ba-add>idx:0 (ifx:0, 3c:a7:ae:fd:b2:dd), tid:6, ssn:2, winSize:64
+[0;32mI (7556) esp_netif_handlers: example_netif_sta ip: 192.168.1.74, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (7556) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.1.74[0m
+[0;32mI (7566) example_common: Connected to example_netif_sta[0m
+[0;32mI (7566) example_common: - IPv4 address: 192.168.1.74,[0m
+[0;32mI (7576) example_common: - IPv6 address: fe80:0000:0000:0000:26dc:c3ff:fea6:d028, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (7586) MQTT_EXAMPLE: Other event id:7[0m
+[0;32mI (7596) main_task: Returned from app_main()[0m
+I (7806) wifi:<ba-add>idx:1 (ifx:0, 3c:a7:ae:fd:b2:dd), tid:5, ssn:1, winSize:64
+[0;32mI (8416) MQTT_EXAMPLE: MQTT_EVENT_CONNECTED[0m
+[0;32mI (8416) MQTT_EXAMPLE: sent publish successful, msg_id=14069[0m
+[0;32mI (8426) MQTT_EXAMPLE: sent subscribe successful, msg_id=53140[0m
+[0;32mI (8426) MQTT_EXAMPLE: sent subscribe successful, msg_id=17810[0m
+[0;32mI (8426) MQTT_EXAMPLE: sent unsubscribe successful, msg_id=24947[0m
+[0;32mI (8616) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=14069[0m
+[0;32mI (8936) MQTT_EXAMPLE: MQTT_EVENT_SUBSCRIBED, msg_id=53140[0m
+[0;32mI (8936) MQTT_EXAMPLE: sent publish successful, msg_id=0[0m
+[0;32mI (8936) MQTT_EXAMPLE: MQTT_EVENT_SUBSCRIBED, msg_id=17810[0m
+[0;32mI (8946) MQTT_EXAMPLE: sent publish successful, msg_id=0[0m
+[0;32mI (8946) MQTT_EXAMPLE: MQTT_EVENT_UNSUBSCRIBED, msg_id=24947[0m
+[0;32mI (8956) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA={
+  "msg": "1"
+}
+[0;32mI (9156) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=data
+[0;32mI (9356) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=64705[0m
+[0;32mI (9356) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+TOPIC=/topic/qos0
+DATA=data
+[0;32mI (9566) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=38005[0m
+[0;32mI (9766) MQTT_EXAMPLE: MQTT_EVENT_PUBLISHED, msg_id=29730[0m
